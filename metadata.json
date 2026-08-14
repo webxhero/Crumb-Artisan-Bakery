@@ -1,0 +1,6 @@
+{
+  "name": "Velvet & Crumb Artisan Bakery",
+  "description": "A luxury artisan bakery & patisserie eCommerce storefront with cake customization, seamless cart & checkout, Dhaka delivery zones, and real-time product discovery.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

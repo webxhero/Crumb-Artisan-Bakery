@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --surface-base: #0c0c0e;
+    --surface-muted: #131317;
+    --surface-raised: #1c1c22;
+    --surface-strong: #25252e;
+
+    --text-primary: #f5f3ef;
+    --text-secondary: #a8a6a1;
+    --text-muted: #73716d;
+    --text-inverse: #0c0c0e;
+
+    --border-default: #26262f;
+    --border-strong: #383844;
+
+    --accent-primary: #c99558;
+    --accent-hover: #dcab6e;
+    --accent-soft: rgba(201, 149, 88, 0.12);
+
+    --success: #38b273;
+    --warning: #eab308;
+    --error: #ef4444;
+
+    --radius-xs: 4px;
+    --radius-sm: 8px;
+    --radius-md: 12px;
+
+    --shadow-1: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+    --shadow-2: 0 12px 36px -4px rgba(0, 0, 0, 0.65);
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--surface-base);
+    color: var(--text-primary);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-serif-heading {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0c0c0e;
+}
+::-webkit-scrollbar-thumb {
+  background: #272731;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3c3c4b;
+}
+
+/* Utility classes for premium surface tokens */
+.bg-surface-base { background-color: var(--surface-base); }
+.bg-surface-muted { background-color: var(--surface-muted); }
+.bg-surface-raised { background-color: var(--surface-raised); }
+.bg-surface-strong { background-color: var(--surface-strong); }
+
+.border-subtle { border-color: var(--border-default); }
+.border-prominent { border-color: var(--border-strong); }
+
+.text-brand-primary { color: var(--text-primary); }
+.text-brand-secondary { color: var(--text-secondary); }
+.text-brand-muted { color: var(--text-muted); }
+
+.text-accent { color: var(--accent-primary); }
+.bg-accent { background-color: var(--accent-primary); }
+.bg-accent-soft { background-color: var(--accent-soft); }
+.border-accent { border-color: var(--accent-primary); }
+
+.font-display {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* Focus visibility for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
+/* Image zoom transition */
+.img-zoom-container {
+  overflow: hidden;
+}
+.img-zoom-container img {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.img-zoom-container:hover img {
+  transform: scale(1.05);
+}
